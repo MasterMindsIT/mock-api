@@ -1,0 +1,108 @@
+[
+  {
+    "id": 1,
+    "nombre": {
+      "es": "Security Shield",
+      "en": "Security Shield"
+    },
+    "descripcion": {
+      "es": "Framework de seguridad para Spring Boot con JWT, UI de login y control de roles. Incluye módulos gratuitos y otros Pro activados por 21 días.",
+      "en": "Security framework for Spring Boot including JWT, login UI and role management. Includes Free and Pro modules enabled for 21 days."
+    },
+    "precio": 19,
+    "imagen": "/images-products/security-shield.png",
+    "categoriaId": 1,
+    "state": "active"
+  },
+  {
+    "id": 2,
+    "nombre": {
+      "es": "Gateway Guard",
+      "en": "Gateway Guard"
+    },
+    "descripcion": {
+      "es": "Protección avanzada para endpoints: bloqueo por país, límite de tasa, validación IP. Compatible con cualquier backend Spring Boot.",
+      "en": "Advanced endpoint protection: geo-blocking, rate limiting, IP validation. Works with any Spring Boot backend."
+    },
+    "precio": 19,
+    "imagen": "/images-products/gateway-guard.png",
+    "categoriaId": 1,
+    "state": "active"
+  },
+  {
+    "id": 3,
+    "nombre": {
+      "es": "Realtime Fortress",
+      "en": "Realtime Fortress"
+    },
+    "descripcion": {
+      "es": "Servidor WebSocket robusto, seguro y con métricas integradas. Ideal para aplicaciones con interacción en tiempo real.",
+      "en": "Robust and secure WebSocket server with integrated metrics. Ideal for real-time interaction apps."
+    },
+    "precio": 15,
+    "imagen": "/images-products/realtime-fortress.png",
+    "categoriaId": 1,
+    "state": "active"
+  },
+  {
+    "id": 4,
+    "nombre": {
+      "es": "Bot Sentinel",
+      "en": "Bot Sentinel"
+    },
+    "descripcion": {
+      "es": "Sistema anti-bot silencioso: incluye honeypot, captcha invisible y validaciones por comportamiento.",
+      "en": "Silent anti-bot system: includes honeypot, invisible captcha, and behavior validation."
+    },
+    "precio": 12,
+    "imagen": "/images-products/bot-sentinel.png",
+    "categoriaId": 2,
+    "state": "active"
+  },
+  {
+    "id": 5,
+    "nombre": {
+      "es": "Data Stronghold",
+      "en": "Data Stronghold"
+    },
+    "descripcion": {
+      "es": "Módulos para trazabilidad, configuración dinámica, auditoría y ajustes centralizados para proyectos Spring Boot.",
+      "en": "Modules for tracing, dynamic configuration, auditing and centralized settings for Spring Boot projects."
+    },
+    "precio": 17,
+    "imagen": "/images-products/data-stronghold.png",
+    "categoriaId": 2,
+    "state": "active"
+  },
+  {
+    "id": 6,
+    "nombre": {
+      "es": "Fortress Complete",
+      "en": "Fortress Complete"
+    },
+    "descripcion": {
+      "es": "Licencia total para todos los productos actuales y futuros. Ideal para equipos de desarrollo exigentes que buscan eficiencia y control total.",
+      "en": "All-access license for current and future products. Ideal for demanding dev teams seeking full control and efficiency."
+    },
+    "precio": 59,
+    "imagen": "/images-products/fortress-complete.png",
+    "categoriaId": 3,
+    "state": "active"
+  },
+  {
+  "id": 7,
+  "nombre": {
+    "es": "Tienda Online Personalizada",
+    "en": "Custom Online Store"
+  },
+  "descripcion": {
+    "es": "Desarrollamos tu tienda online a medida usando herramientas como WordPress, Joomla o frameworks modernos. Ideal para lanzar tu negocio rápido y con estilo profesional.",
+    "en": "We build your custom online store using platforms like WordPress, Joomla or modern frameworks. Perfect to launch your business quickly with a professional touch."
+  },
+  "precio": 39,
+  "imagen": "/images-products/ecommerce-store.png",
+   "categoriaId": 3,
+    "state": "active"
+}
+
+]
