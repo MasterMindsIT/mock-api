@@ -17,6 +17,9 @@ management:
     web:
       exposure:
         include: "*"
+  metrics:
+    tags:
+      application: notification-service
   tracing:
     sampling:
       probability: 1.0
