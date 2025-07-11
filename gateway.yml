@@ -26,6 +26,9 @@ eureka:
       defaultZone: http://eureka-server:8761/eureka
 
 management:
+  endpoint:
+    health:
+      show-details: always
   endpoints:
     web:
       exposure:
@@ -36,4 +39,5 @@ management:
   tracing:
     sampling:
       probability: 1.0
+
 
