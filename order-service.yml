@@ -4,8 +4,6 @@ server:
 spring:
   kafka:
     bootstrap-servers: kafka:9092
-  zipkin:
-    base-url: http://zipkin:9411
 
 eureka:
   client:
@@ -23,45 +21,29 @@ management:
   tracing:
     sampling:
       probability: 1.0
+  otlp:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans
 
 feign:
   client:
     config:
-      default:     # O remplazar default por el nombre de tu Feign client @FeignClient(name = "inventory-service") si tienes muchos y distintos
-        connectTimeout: 2000   # milisegundos para establecer conexión (2s)
-        readTimeout: 3000   # milisegundos para leer la respuesta (3s)
-
-#Ejemplo con nombre propio
-# feign:
-#   client:
-#     config:
-#       inventory-service:
-#         connectTimeout: 2000
-#         readTimeout: 3000
-
-#Combinados 
-# feign:
-#   client:
-#     config:
-#       default:
-#         connectTimeout: 3000
-#         readTimeout: 5000
-#       inventory-service:
-#         connectTimeout: 2000
-#         readTimeout: 2000
+      default:
+        connectTimeout: 2000
+        readTimeout: 3000
 
 resilience4j:
   circuitbreaker:
     instances:
       inventoryServiceCB:
-        slidingWindowSize: 5            # Evalúa últimas 5 llamadas
-        failureRateThreshold: 50        # Si el 50% falla, se abre
-        waitDurationInOpenState: 10s    # Tiempo que permanece abierto
-        permittedNumberOfCallsInHalfOpenState: 2  # Llamadas de prueba
-        slowCallDurationThreshold: 2s   # Si tarda más de 2s, cuenta como lenta
-        slowCallRateThreshold: 100      # Si el 100% son lentas, también abre el circuito
+        slidingWindowSize: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 2
+        slowCallDurationThreshold: 2s
+        slowCallRateThreshold: 100
   retry:
     instances:
       inventoryServiceCB:
-        maxAttempts: 3                  # Total de intentos (1 inicial + 2 retries)
-        waitDuration: 500ms             # Espera entre retries
+        maxAttempts: 3
+        waitDuration: 500ms
