@@ -45,5 +45,11 @@ resilience4j:
   retry:
     instances:
       inventoryServiceCB:
-        maxAttempts: 3
-        waitDuration: 500ms
+        maxAttempts: 3              # 1 intento original + 2 reintentos
+        waitDuration: 500ms         # Espera entre intentos
+        retry-exceptions:
+          - feign.FeignException$InternalServerError
+          - feign.RetryableException
+        ignore-exceptions:
+          - feign.FeignException$NotFound
+
