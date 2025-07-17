@@ -24,5 +24,8 @@ management:
     exporter:
       zipkin:
         endpoint: http://zipkin:9411/api/v2/spans
+        sender-type: web
+        connect-timeout: 5s
+        read-timeout: 5s
       otlp:
         enabled: false
